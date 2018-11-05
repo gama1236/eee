@@ -1,6 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { BotFoundPageComponent } from './not-found-page.component';
+import { BotFoundPageComponent } from './bot-found-page.component';
 
 describe('BotFoundPageComponent', () => {
   let component: BotFoundPageComponent;
