@@ -29,7 +29,8 @@
             "styles": [
               "./node_modules/bootswatch/dist/simplex/bootstrap.css",
               "./node_modules/font-awesome/css/font-awesome.css",
-              "src/styles.scss"
+              "src/styles.scss",
+              "./node_modules/leaflet-routing-machine/dist/leaflet-routing-machine.css"
             ],
             "scripts": [
               "./node_modules/jquery/dist/jquery.min.js",

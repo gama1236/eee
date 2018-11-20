@@ -3,18 +3,27 @@
     <div class="card">
       <div class="card-body">
         <h1 class="text-center">Login de Usuario</h1>
-        <form>
-          <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" name="email" id="email" class="form-control">
-          </div>
-          <div class="form-group">
-            <label for="password">Contraseña</label>
-            <input type="password" name="password" id="password" class="form-control">
-          </div>
-          <input type="text" value="enviar" class="btn btn-primary btn-block btn-lg">
+        <form [formGroup]="formGroup">
 
+          <!-- Correo Electronico -->
+          <div class="example-container">
+            <mat-form-field>
+              <label for="correo" style="font-size: 16px">Correo</label>
+              <input matInput style="font-size: 14px" id="correo" formControlName="correo" required>
+              <mat-error *ngIf="formGroup.contains('correo').valueOf().invalid">{{getErrorMessage()}}</mat-error>
+            </mat-form-field>
+          </div>
 
+          <!-- Password -->
+          <div class="example-container">
+            <mat-form-field>
+              <label for="password" style="font-size: 16px">Password</label>
+              <input matInput style="font-size: 14px" id="password" formControlName="contra" [type]="hide ? 'password' : 'text'">
+              <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </mat-form-field>
+          </div>
+
+          <button (click)="login()" class="btn btn-info btn-block">Login</button>
         </form>
       </div>
     </div>
